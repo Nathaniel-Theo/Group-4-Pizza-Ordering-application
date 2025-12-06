@@ -37,6 +37,8 @@ else:
 # Extra Cheese
 if extra_cheese1 == "Y":
     cheese_price += 1
+elif extra_cheese1 == "N":
+    cheese_price += 0 
 else:
     extra_cheese = input("Invalid input. Please enter Y or N. ")
 
