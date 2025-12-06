@@ -32,11 +32,15 @@ if add_pep1 == "Y":
         pep_price += 2
     elif size1 == "M" or size1 == "L": 
         pep_price += 3
+elif add_pep1 == "N":
+    pep_price += 0
 else:
     add_pep = input("Invalid input. Please enter Y or N. ")
 # Extra Cheese
 if extra_cheese1 == "Y":
     cheese_price += 1
+elif extra_cheese1 == "N":
+    cheese_price += 0
 else:
     extra_cheese = input("Invalid input. Please enter Y or N. ")
 
@@ -51,4 +55,5 @@ if extra_cheese1 == "Y":
 print("-----------------------")
 print("Total Bill: $" + str(total_price))
 print("Thank you for your order!")
+
 
