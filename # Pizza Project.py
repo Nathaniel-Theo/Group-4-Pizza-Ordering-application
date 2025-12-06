@@ -1,44 +1,49 @@
 # Pizza Project
 print("Welcome to the Pizza Ordering System!")
 
-size = input("Choose your pizza size: Small (S), Medium (M), or Large (L)? ")
-add_pep = input("Would you like to add pepperoni? (Y/N) ")
-extra_cheese = input("Would you like to add extra cheese? (Y/N) ")
-
-size1 = size.upper()
 pizza_size = ""
 base_price = 0
 pep_price = 0
 cheese_price = 0
 total_price = 0
-add_pep1 = add_pep.upper()
-extra_cheese1 = extra_cheese.upper()
 
 # Size Selection
-if size1 == "S":
-    pizza_size = "small"
-    base_price = 15
-elif size1 == "M":
-    pizza_size = "medium"
-    base_price = 20
-elif size1 == "L":
-    pizza_size = "large"
-    base_price = 25
-else:
-    size = input("Invalid response. Please choose a size between Small (S), Medium (M), or Large (L)." )
+while True:
+    size = input("Choose your pizza size: Small (S), Medium (M), or Large (L)? ")
+    size1 = size.upper()
+
+    if size1 == "S":
+        pizza_size = "small"
+        base_price = 15
+    elif size1 == "M":
+        pizza_size = "medium"
+        base_price = 20
+    elif size1 == "L":
+        pizza_size = "large"
+        base_price = 25
+        break
+    else:
+        size = input("Invalid response. Please choose a size between Small (S), Medium (M), or Large (L)." )
 # Add Pepperoni 
+add_pep = input("Would you like to add pepperoni? (Y/N) ")
+add_pep1 = add_pep.upper()
+add_pep1 = add_pep.upper()
 if add_pep1 == "Y":
     if size1 == "S":
         pep_price += 2
     elif size1 == "M" or size1 == "L": 
         pep_price += 3
+elif add_pep1 == "N":
+    pep_price += 0
 else:
     add_pep = input("Invalid input. Please enter Y or N. ")
 # Extra Cheese
+extra_cheese = input("Would you like to add extra cheese? (Y/N) ")
+extra_cheese1 = extra_cheese.upper()
 if extra_cheese1 == "Y":
     cheese_price += 1
 elif extra_cheese1 == "N":
-    cheese_price += 0 
+    cheese_price += 0
 else:
     extra_cheese = input("Invalid input. Please enter Y or N. ")
 
